@@ -15,6 +15,7 @@ export const About = () => {
               <h3>Frontend Developer</h3>
               <p>
               I'm a frontend developer proficient in React and JavaScript, with experience in building responsive and optimized websites.
+              I have developed over 20+ projects using JavaScript, showcasing my expertise in building dynamic and interactive web applications.
               </p>
             </div>
           </li>

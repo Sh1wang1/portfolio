@@ -24,7 +24,7 @@ export const About = () => {
             <div className={styles.aboutItemText}>
               <h3>Backend Developer</h3>
               <p>
-                I have experience developing optimized back-end systems and APIs, with knowledge of Express.js and Node.js.
+                I have experience of back-end systems and APIs, with knowledge of Express.js and Node.js.
               </p>
             </div>
           </li>
@@ -33,7 +33,7 @@ export const About = () => {
             <div className={styles.aboutItemText}>
               <h3>Problem Solving Skills </h3>
               <p>
-              I have problem solving skills, with expertise in data structures and algorithms.
+              Proficient in problem solving skills, with expertise in data structures and algorithms.
               </p>
             </div>
           </li>

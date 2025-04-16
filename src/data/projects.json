@@ -2,7 +2,7 @@
   {
     "title": "Sortify",
     "imageSrc": "projects/sort.JPG",
-    "description": "Built Sortify, an interactive sorting visualizer with customizable controls for algorithm, speed, range, and color – optimized for all devices using React .",
+    "description":"Built Sortify,an interactive sorting visualizer with customizable controls for algorithm type, speed, range.",
     "skills": ["React","JavaScript", "CSS", "HTML"],
     "demo": "https://sortify-react.netlify.app/",
     "source": "https://github.com/Sh1wang1/sortify"
@@ -26,7 +26,7 @@
   {
     "title": "QR Code Generator",
     "imageSrc": "projects/qr.JPG",
-    "description": "I developed a QR Code Generator using HTML ,CSS,and JavaScript. This allows users to generate QR codes by entering any text or URL.",
+    "description": "I developed a QR Code Generator. This allows users to generate QR codes by entering any text or URL.",
     "skills": ["JavaScript", "CSS", "HTML"],
     "demo": "https://js1-qrcode-generator.netlify.app/",
     "source": "https://github.com/Sh1wang1/js_project_practice/tree/main/Quote%20generator"
@@ -34,7 +34,7 @@
   {
     "title": "Meme Generator",
     "imageSrc": "projects/meme.JPG",
-    "description": "I Developed a Meme Generator using HTML, CSS, and JavaScript, integrating an API to fetch and display memes dynamically.",
+    "description": "I Developed a Meme Generator by integrating an API to fetch and display memes dynamically.",
     "skills": ["JavaScript", "CSS", "HTML","API Integration"],
     "demo": "https://memejs-api.netlify.app/",
     "source": "https://github.com/Sh1wang1/js_project_practice/tree/main/meme"

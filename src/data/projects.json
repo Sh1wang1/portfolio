@@ -1,5 +1,13 @@
 [
   {
+    "title": "Sortify",
+    "imageSrc": "projects/sort.JPG",
+    "description": "Built Sortify, an interactive sorting visualizer with customizable controls for algorithm, speed, range, and color – optimized for all devices using React .",
+    "skills": ["React","JavaScript", "CSS", "HTML"],
+    "demo": "https://sortify-react.netlify.app/",
+    "source": "https://github.com/Sh1wang1/sortify"
+  },
+  {
     "title": "CodeEditor",
     "imageSrc": "projects/projects.png",
     "description": "This project is designed to provide a Code Editor where users can write and test code in HTML, CSS, and JavaScript.",

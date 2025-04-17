@@ -10,7 +10,7 @@ export const Hero = () => {
         <h1 className={styles.title}>Hi, I'm Shiwangi</h1>
         <p className={styles.description}>
         I'm a Frontend Developer with expertise in React and JavaScript, 
-        and I have some knowledge of Node.js and Express.js for backend development. Reach out if you'd like to learn more!
+        and I have also knowledge of Node.js and Express.js for backend development. Reach out if you'd like to learn more!
         </p>
         <a href="mailto:shiwangiverma2003@email.com" className={styles.contactBtn}>
           Contact Me

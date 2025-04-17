@@ -23,7 +23,7 @@
 }
 
 .skills {
-  width: 45%;
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
   gap: 37px;
@@ -56,7 +56,7 @@
   font-weight: 500;
 }
 
-.history {
+/* .history {
   width: 45%;
   display: flex;
   flex-direction: column;
@@ -98,7 +98,7 @@
   font-size: 25px;
   list-style-type: disc;
   margin-left: 17px;
-}
+} */
 
 @media screen and (max-width: 830px) {
   .content {
@@ -113,8 +113,8 @@
     justify-content: center;
   }
 
-  .history {
+  /* .history {
     width: 100%;
     gap: 9px;
-  }
+  } */
 }

@@ -51,6 +51,7 @@
   background-size: 0 100%;
   background-repeat: no-repeat;
   transition: 0.4s;
+  gap:10px;
 }
 
 .aboutItem:hover {
@@ -60,10 +61,12 @@
 .aboutItem h3 {
   font-size: 25px;
   font-weight: 600;
+  color:rgb(255, 255, 255)
 }
 
 .aboutItem p {
   font-size: 25px;
+  color: rgb(207, 199, 189);
 }
 
 @media screen and (max-width: 830px) {
@@ -81,12 +84,12 @@
     display: none;
   }
 
-  .aboutItems {
+   .aboutItems {
     margin-top: 29px;
   }
 
   .aboutItem {
     padding-left: 0;
     padding-right: 0;
-  }
+  } 
 }

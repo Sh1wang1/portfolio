@@ -18,7 +18,7 @@
   {
     "title": "Pokemon Finder",
     "imageSrc": "projects/poke.JPG",
-    "description": "I developed a Pokémon Finder web application using React and Axios, integrating the PokéAPI to dynamically fetch and display Pokémon data.",
+    "description":"Built a Pokémon Finder using Axios to fetch and display data from the PokéAPI.",
     "skills": ["React.js","JavaScript","API Integration", "CSS", "HTML"],
     "demo": "https://pokemonfinder11.netlify.app/",
     "source": "https://github.com/Sh1wang1/pokemonFinder"

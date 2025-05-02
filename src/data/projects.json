@@ -3,7 +3,7 @@
     "title": "Sortify",
     "imageSrc": "projects/sort.JPG",
     "description":"Built Sortify,an interactive sorting visualizer with customizable controls for algorithm type, speed, range.",
-    "skills": ["React","JavaScript", "CSS", "HTML"],
+    "skills": ["React.js","JavaScript", "CSS", "HTML"],
     "demo": "https://sortify-react.netlify.app/",
     "source": "https://github.com/Sh1wang1/sortify"
   },
@@ -14,6 +14,14 @@
     "skills": ["JavaScript", "CSS", "HTML"],
     "demo": "https://codeeditor-js.netlify.app/",
     "source": "https://github.com/Sh1wang1/codeEditor_js_project"
+  },
+  {
+    "title": "Pokemon Finder",
+    "imageSrc": "projects/poke.JPG",
+    "description": "I developed a Pokémon Finder web application using React and Axios, integrating the PokéAPI to dynamically fetch and display Pokémon data.",
+    "skills": ["React.js","JavaScript","API Integration", "CSS", "HTML"],
+    "demo": "https://pokemonfinder11.netlify.app/",
+    "source": "https://github.com/Sh1wang1/pokemonFinder"
   },
   {
     "title": "Game",
@@ -30,13 +38,6 @@
     "skills": ["JavaScript", "CSS", "HTML"],
     "demo": "https://js1-qrcode-generator.netlify.app/",
     "source": "https://github.com/Sh1wang1/js_project_practice/tree/main/Quote%20generator"
-  },
-  {
-    "title": "Meme Generator",
-    "imageSrc": "projects/meme.JPG",
-    "description": "I Developed a Meme Generator by integrating an API to fetch and display memes dynamically.",
-    "skills": ["JavaScript", "CSS", "HTML","API Integration"],
-    "demo": "https://memejs-api.netlify.app/",
-    "source": "https://github.com/Sh1wang1/js_project_practice/tree/main/meme"
   }
+
 ]

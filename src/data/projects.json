@@ -2,8 +2,8 @@
   {
     "title": "Sortify",
     "imageSrc": "projects/sort.JPG",
-    "description":"Built Sortify,an interactive sorting visualizer with customizable controls for algorithm type, speed, range.",
-    "skills": ["React.js","JavaScript", "CSS", "HTML"],
+    "description": "Built Sortify,an interactive sorting visualizer with customizable controls for algorithm type, speed, range.",
+    "skills": ["React.js", "JavaScript", "CSS", "HTML"],
     "demo": "https://sortify-react.netlify.app/",
     "source": "https://github.com/Sh1wang1/sortify"
   },
@@ -16,18 +16,41 @@
     "source": "https://github.com/Sh1wang1/codeEditor_js_project"
   },
   {
+    "title": "Item Manager",
+    "imageSrc": "projects/item.JPG",
+    "description": "A full-stack Item Manager app using React, Express and Mongoose, with modals, image carousels, and email support via Nodemailer.",
+    "skills": ["React","JavaScript","Axios","Express.js","Mongoose","Nodemailer"],
+    "demo": "https://github.com/Sh1wang1/reactAssginment",
+    "source": "https://reactassginment-frontend.onrender.com/"
+  },
+  {
+    "title": "Item Manager",
+    "imageSrc": "projects/item.JPG",
+    "description": "A full-stack Item Manager app using React, Express and Mongoose, with modals, image carousels, and email support via Nodemailer.",
+    "skills": ["React","JavaScript","Axios","Express.js","Mongoose","Nodemailer"],
+    "demo": "https://github.com/Sh1wang1/reactAssginment",
+    "source": "https://reactassginment-frontend.onrender.com/"
+  },
+  {
     "title": "Pokemon Finder",
     "imageSrc": "projects/poke.JPG",
-    "description":"Built a Pokémon Finder using Axios to fetch and display data from the PokéAPI.",
-    "skills": ["React.js","JavaScript","API Integration", "CSS", "HTML"],
+    "description": "Built a Pokémon Finder using Axios to fetch and display data from the PokéAPI.",
+    "skills": ["React.js", "JavaScript", "API Integration", "CSS", "HTML"],
     "demo": "https://pokemonfinder11.netlify.app/",
     "source": "https://github.com/Sh1wang1/pokemonFinder"
   },
-   {
+  {
     "title": "Softshell",
     "imageSrc": "projects/softshell.JPG",
     "description": "A fast and responsive React app powered by Vite and Tailwind CSS, with icon support via Lucide and React Icons.",
-    "skills": ["React","React 19","Vite","JavaScript","Tailwind CSS","Lucide Icons"],
+    "skills": [
+      "React",
+      "React 19",
+      "Vite",
+      "JavaScript",
+      "Tailwind CSS",
+      "Lucide Icons"
+    ],
     "demo": "https://softsell1.netlify.app/",
     "source": "https://github.com/Sh1wang1/softshell"
   },
@@ -35,10 +58,8 @@
     "title": "Game",
     "imageSrc": "projects/game.JPG",
     "description": "This project is a Rock-Paper-Scissors game that I developed using HTML, CSS, and JavaScript, featuring sound effects.",
-    "skills":["JavaScript", "CSS", "HTML"] ,
+    "skills": ["JavaScript", "CSS", "HTML"],
     "demo": "https://soundjs-rock-paper-scissor.netlify.app/",
     "source": "https://github.com/Sh1wang1/js_project_practice/tree/main/game"
   }
-  
-
 ]

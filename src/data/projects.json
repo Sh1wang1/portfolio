@@ -19,17 +19,24 @@
     "title": "Item Manager",
     "imageSrc": "projects/item.JPG",
     "description": "A full-stack Item Manager app using React, Express and Mongoose, with modals, image carousels, and email support via Nodemailer.",
-    "skills": ["React","JavaScript","Axios","Express.js","Mongoose","Nodemailer"],
+    "skills": [
+      "React",
+      "JavaScript",
+      "Axios",
+      "Express.js",
+      "Mongoose",
+      "Nodemailer"
+    ],
     "demo": "https://github.com/Sh1wang1/reactAssginment",
     "source": "https://reactassginment-frontend.onrender.com/"
   },
   {
-    "title": "Item Manager",
-    "imageSrc": "projects/item.JPG",
-    "description": "A full-stack Item Manager app using React, Express and Mongoose, with modals, image carousels, and email support via Nodemailer.",
-    "skills": ["React","JavaScript","Axios","Express.js","Mongoose","Nodemailer"],
-    "demo": "https://github.com/Sh1wang1/reactAssginment",
-    "source": "https://reactassginment-frontend.onrender.com/"
+    "title": "CRUD Next.js",
+    "imageSrc": "projects/nect.JPG",
+    "description": "A responsive CRUD app built with Next.js 15, React 19, and Tailwind CSS 4, allowing users to add, edit, and delete items with dynamic routing and clean UI.",
+    "skills": ["Next.js 15", "React 19", "JavaScript"],
+    "demo": "https://github.com/Sh1wang1/Assignment",
+    "source": "https://assignment-fetl42jhm-sh1wang1s-projects.vercel.app/"
   },
   {
     "title": "Pokemon Finder",

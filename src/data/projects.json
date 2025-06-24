@@ -18,7 +18,7 @@
   {
     "title": "Item Manager",
     "imageSrc": "projects/item.JPG",
-    "description": "A full-stack Item Manager app using React,Express,Mongoose,with modals and email support via Nodemailer.",
+    "description": "A small Item Manager app using React, Express, Mongoose, with modals and email support via Nodemailer.",
     "skills": [
       "React","JavaScript","Axios","Express.js","Mongoose","Nodemailer"],
     "demo": "https://github.com/Sh1wang1/reactAssginment",
@@ -45,7 +45,6 @@
     "imageSrc": "projects/softshell.JPG",
     "description": "A fast and responsive React app powered by Vite and Tailwind CSS, with icon support via Lucide and React Icons.",
     "skills": [
-      "React",
       "React 19",
       "Vite",
       "JavaScript",

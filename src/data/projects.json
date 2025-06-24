@@ -32,7 +32,7 @@
   },
   {
     "title": "CRUD Next.js",
-    "imageSrc": "projects/nect.JPG",
+    "imageSrc": "projects/next.JPG",
     "description": "A responsive CRUD app built with Next.js 15, React 19, and Tailwind CSS 4, allowing users to add, edit, and delete items with dynamic routing and clean UI.",
     "skills": ["Next.js 15", "React 19", "JavaScript"],
     "demo": "https://github.com/Sh1wang1/Assignment",

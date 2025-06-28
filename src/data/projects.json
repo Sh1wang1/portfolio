@@ -21,16 +21,16 @@
     "description": "A small Item Manager app using React, Express, Mongoose, with modals and email support via Nodemailer.",
     "skills": [
       "React","JavaScript","Axios","Express.js","Mongoose","Nodemailer"],
-    "demo": "https://github.com/Sh1wang1/reactAssginment",
-    "source": "https://reactassginment-frontend.onrender.com/"
+    "demo":"https://reactassginment-frontend.onrender.com/",
+    "source":  "https://github.com/Sh1wang1/reactAssginment"
   },
   {
     "title": "CRUD Next.js",
     "imageSrc": "projects/next.JPG",
     "description": "A responsive CRUD app allowing users to add, edit, and delete items with dynamic routing and clean UI.",
     "skills": ["Next.js 15", "React 19", "JavaScript"],
-    "demo": "https://github.com/Sh1wang1/Assignment",
-    "source": "https://assignment-fetl42jhm-sh1wang1s-projects.vercel.app/"
+    "demo": "https://assignment-fetl42jhm-sh1wang1s-projects.vercel.app/",
+    "source": "https://github.com/Sh1wang1/Assignment"
   },
   {
     "title": "Pokemon Finder",

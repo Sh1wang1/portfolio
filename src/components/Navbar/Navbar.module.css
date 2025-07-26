@@ -1,13 +1,19 @@
 @import "../../vars.css";
 
 .navbar {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-bg, #0a183d); /* Black background for navbar */
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.3);
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 35px;
-  z-index: 2;
-  margin: 0 10%;
+  padding: 20px 10%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .title {
@@ -40,14 +46,19 @@
 
 @media screen and (max-width: 830px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 15px 5%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 24px;
   }
 
   .menu {
     position: absolute;
-    right: 0;
-    margin-right: 0%;
+    right: 5%;
+    top: 70px;
     flex-direction: column;
     align-items: flex-end;
     gap: 11px;
@@ -55,8 +66,10 @@
   }
 
   .menuBtn {
-    display:block;
+    display: block;
     cursor: pointer;
+    width: 30px;
+    height: 30px;
   }
 
   .menuItems {
@@ -73,10 +86,35 @@
     );
     padding: 24px 33px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    min-width: 200px;
+  }
+
+  .menuItems a {
+    font-size: 20px;
+    padding: 8px 0;
   }
 
   .menuOpen {
     display: flex;
     z-index: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 12px 3%;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .menuItems {
+    padding: 20px 25px;
+    min-width: 180px;
+  }
+
+  .menuItems a {
+    font-size: 18px;
   }
 }

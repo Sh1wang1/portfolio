@@ -16,12 +16,12 @@
 }
 
 .experienceItem {
-  background: linear-gradient(180deg, rgba(87, 108, 188, 0.1) 0%, rgba(19, 42, 83, 0.1) 100%);
-  border-radius: 15px;
-  padding: 30px;
-  margin-bottom: 30px;
-  border: 1px solid rgba(87, 108, 188, 0.2);
-  box-shadow: 0 8px 16px rgba(4, 21, 45, 0.3);
+  background: linear-gradient(120deg, #132a53 80%, #19376d 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 #04152d55;
+  padding: 32px 36px;
+  position: relative;
+  border: 1px solid #19376d;
 }
 
 .company {
@@ -33,48 +33,101 @@
 }
 
 .companyName {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
-  color: var(--color-primary);
+  color: #8ab4f8;
   margin: 0;
 }
 
 .role {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
-  color: var(--color-text);
-  background: var(--color-dark);
-  padding: 8px 16px;
-  border-radius: 20px;
+  color: #fff;
+  background: #19376d;
+  padding: 6px 16px;
+  border-radius: 16px;
   font-style: italic;
+  margin-left: 0;
+  margin-bottom: 4px;
+}
+
+.period {
+  display: inline-block;
+  font-size: 15px;
+  color: #b0b8d1;
+  background: #132a53;
+  border-radius: 12px;
+  padding: 2px 10px;
+  font-weight: 400;
 }
 
 .details {
   margin-top: 15px;
 }
 
-.responsibilities {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.responsibilities li {
+.description {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
-  margin-bottom: 15px;
-  padding-left: 25px;
-  position: relative;
+  margin-bottom: 10px;
+  color: var(--color-text);
 }
 
-.responsibilities li::before {
-  content: "▶";
-  color: var(--color-primary);
-  font-size: 14px;
-  position: absolute;
-  left: 0;
-  top: 2px;
+.responsibilities {
+  margin: 0;
+  padding-left: 0;
+  font-size: 17px;
+  color: #e0e6f7;
+  list-style: none;
+}
+
+.responsibilities li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.7;
+  background: none;
+}
+
+.icon {
+  color: #576cbc;
+  margin-top: 3px;
+  min-width: 20px;
+}
+
+/* Timeline styles */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.companyRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 10px;
+}
+
+.companyLogo {
+  background: linear-gradient(135deg, #19376d 0%, #576cbc 100%);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(25, 55, 109, 0.15);
+}
+
+.topRightInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  margin-left: auto;
 }
 
 /* Responsive design */

@@ -5,6 +5,8 @@
   color: var(--color-text);
   margin-left: 10%;
   margin-right: 10%;
+      scroll-margin-top: 100px; /* Ensures About heading is visible below fixed navbar */
+
 }
 
 .title {
@@ -21,7 +23,160 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 38px 32px; /* row-gap column-gap */
   width: 100%;
-  
+}
+
+.projectCard {
+  background: linear-gradient(135deg, rgba(40,44,52,0.95) 60%, rgba(60,70,100,0.85) 100%);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+  border-radius: 22px;
+  padding: 32px 24px 28px 24px;
+  margin: 18px 10px;
+  min-width: 320px;
+  max-width: 370px;
+  transition: transform 0.22s cubic-bezier(.4,2,.6,1), box-shadow 0.22s, border-color 0.22s;
+  border: 1.5px solid rgba(255,255,255,0.08);
+  position: relative;
+  overflow: hidden;
+  touch-action: manipulation;
+}
+
+.projectCard:hover,
+.projectCard:focus {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 0 4px rgba(30, 60, 180, 0.35), 0 16px 40px 0 rgba(31, 38, 135, 0.35);
+  border-color: #1e3cb4;
+  outline: none;
+}
+
+.projectCard:active {
+  transform: translateY(-4px) scale(0.98);
+  box-shadow: 0 0 0 6px rgba(30, 60, 180, 0.22), 0 8px 24px 0 rgba(31, 38, 135, 0.18);
+  border-color: #1e3cb4;
+  outline: none;
+}
+
+.projectCard img {
+  border-radius: 12px;
+  margin-bottom: 18px;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.10);
+}
+
+.projectTitle {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-accent, #fff);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.projectDesc {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary, #c7c7c7);
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.techItem {
+  background: rgba(127,90,240,0.13);
+  color: var(--color-accent, #7f5af0);
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: background 0.2s;
+}
+
+.projectCard:hover .techItem {
+  background: rgba(127,90,240,0.22);
+}
+
+.projectLinks {
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.projectBtn {
+  background: var(--color-accent, #7f5af0);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(127,90,240,0.10);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.projectBtn:hover {
+  background: #6241c5;
+  transform: scale(1.07);
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    margin-top: 60px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .projects {
+    margin-top: 30px;
+    gap: 30px 20px;
+    justify-content: center;
+  }
+
+  .projectCard {
+    min-width: 280px;
+    max-width: 320px;
+    padding: 24px 20px;
+    margin: 10px 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 0 15px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .projects {
+    gap: 25px 15px;
+  }
+
+  .projectCard {
+    min-width: 260px;
+    max-width: 280px;
+    padding: 20px 16px;
+  }
+
+  .projectBtn {
+    padding: 6px 18px;
+    font-size: 0.9rem;
+  }
 }

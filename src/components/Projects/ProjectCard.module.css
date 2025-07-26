@@ -1,6 +1,6 @@
 @import "../../vars.css";
-
 .container {
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,15 +14,6 @@
   min-height: 550px;
   overflow: hidden; 
   text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
-  touch-action: manipulation;
-}
-
-.container:hover,
-.container:active {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 24px 32px 0 #04152d;
-  cursor: pointer;
 }
 
 .image {
@@ -79,7 +70,8 @@
   padding: 6px 16px;
 }
 
-.cardContainer {
+
+.card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

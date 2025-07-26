@@ -5,11 +5,11 @@ import { getImageUrl } from "../../utils";
 
 export const Hero = () => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="hero">
       <div className={styles.content}>
         <h1 className={styles.title}>Hi, I'm Shiwangi</h1>
         <p className={styles.description}>
-        I'm a Frontend Developer with expertise in React and JavaScript, 
+        I'm a Full Stack Developer with expertise in React and JavaScript, 
         and I have also knowledge of Node.js and Express.js for backend development. Reach out if you'd like to learn more!
         </p>
         <a href="mailto:shiwangiverma2003@email.com" className={styles.contactBtn}>

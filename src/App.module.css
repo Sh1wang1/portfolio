@@ -9,3 +9,15 @@
   overflow-x: hidden;
   position: relative;
 }
+
+@media screen and (max-width: 830px) {
+  .App {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .App {
+    overflow-x: hidden;
+  }
+}

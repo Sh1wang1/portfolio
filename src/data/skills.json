@@ -1,38 +1,75 @@
-[
+ [
+  {
+    "name": "HTML",
+    "level": "Advanced",
+    "width": "95%",
+    "icon": "skills/html.png",
+    "category": "frontend"
+  },
     {
-      "title": "HTML",
-      "imageSrc": "skills/html.png"
+        "name": "CSS",
+        "level": "Advanced",
+        "width": "90%",
+        "icon": "skills/css.png",
+        "category": "frontend"
     },
     {
-      "title": "CSS",
-      "imageSrc": "skills/css.png"
+        "name": "JavaScript",
+        "level": "Advanced",
+        "width": "85%",
+        "icon": "skills/jss.JPEG",
+        "category": "frontend"
     },
     {
-      "title": "JavaScript",
-      "imageSrc": "skills/jss.JPEG"
+        "name": "React.js",
+        "level": "Advanced",
+        "width": "80%",
+        "icon": "skills/react.png",
+        "category": "frontend"
     },
     {
-      "title": "React",
-      "imageSrc": "skills/react.png"
+        "name": "Node.js",
+        "level": "Intermediate",
+        "width": "75%",
+        "icon": "skills/node.png",
+        "category": "backend"
     },
     {
-      "title": "Node",
-      "imageSrc": "skills/node.png"
+        "name": "Express.js",
+        "level": "Intermediate",
+        "width": "70%",
+        "icon": "skills/express.png",
+        "category": "backend"
     },
     {
-      "title": "Express",
-      "imageSrc": "skills/express.png"
+        "name": "MongoDB",
+        "level": "Intermediate",
+        "width": "65%",
+        "icon": "skills/db.jpg",
+        "category": "database"
     },
     {
-      "title":"MongoDB",
-      "imageSrc": "skills/db.jpg"
+        "name": "Tailwind CSS",
+        "level": "Intermediate",
+        "width": "70%",
+        "icon": "skills/tail.png",
+        "category": "frontend"
+    },
+   
+    {
+        "name": "Python",
+        "level": "Intermediate",
+        "width": "60%",
+        "icon": "skills/python.png",
+        "category": "programming language"
     },
     {
-      "title": "C++",
-      "imageSrc": "skills/c++.png"
-    },
-    {
-      "title": "Python",
-      "imageSrc": "skills/python.png"
+        "name": "C++",
+        "level": "Intermediate",
+        "width": "70%",
+        "icon": "skills/c++.png",
+        "category": "programming language"
     }
-  ]
+ 
+]
+

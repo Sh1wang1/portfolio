@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 49px;
+  margin-top: 210px; /* Further increased gap between fixed navbar and hero section */
   z-index: 1;
   margin-left: 10%;
   margin-right: 10%;
@@ -30,13 +30,20 @@
     rgba(95, 95, 95, 0.986) 90%
   );
    -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text; 
+  -webkit-background-clip: text;
+  background-clip: text; /* Standard property for compatibility */
 }
 
 .description {
-  font-size: 30px;
+  font-size: 24px;
   font-family: var(--font-roboto);
   margin-bottom: 52px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  max-width: 600px;
+  text-align: left;
+  letter-spacing: 0.5px;
 }
 
 .contactBtn {
@@ -51,9 +58,10 @@
 }
 
 .heroImg {
-  width: 40%;
+  width: 28%;
   z-index: 1;
   border-radius: 50%;
+  border: 4px solid #0a2a6c; /* Thin dark blue border */
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -103,9 +111,57 @@
 @media screen and (max-width: 830px) {
   .container {
     flex-direction: column-reverse;
+    margin-top: 120px;
+    padding: 0 20px;
   }
 
   .content {
     align-items: center;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .contactBtn {
+    font-size: 24px;
+    padding: 15px 24px;
+  }
+
+  .heroImg {
+    width: 60%;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    margin-top: 100px;
+    padding: 0 15px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .contactBtn {
+    font-size: 20px;
+    padding: 12px 20px;
+  }
+
+  .heroImg {
+    width: 70%;
   }
 }

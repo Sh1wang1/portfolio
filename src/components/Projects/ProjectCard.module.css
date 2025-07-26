@@ -1,4 +1,5 @@
 @import "../../vars.css";
+
 .container {
   display: flex;
   flex-direction: column;
@@ -9,10 +10,19 @@
   box-shadow: 0 16px 14px 0 #04152d;
   padding: 18px 24px;
   width: 345px;
-  height: 450px; 
-  min-height: 450px;
+  height: 550px; 
+  min-height: 550px;
   overflow: hidden; 
   text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  touch-action: manipulation;
+}
+
+.container:hover,
+.container:active {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 24px 32px 0 #04152d;
+  cursor: pointer;
 }
 
 .image {
@@ -69,8 +79,7 @@
   padding: 6px 16px;
 }
 
-
-.card-container {
+.cardContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

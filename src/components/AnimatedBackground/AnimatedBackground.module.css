@@ -1,0 +1,245 @@
+@import "../../vars.css";
+
+.animatedBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, rgba(87, 108, 188, 0.05) 0%, transparent 50%);
+}
+
+/* Floating geometric shapes */
+.shape {
+  position: absolute;
+  opacity: 0.25;
+  animation: floatAround 20s infinite linear;
+  filter: drop-shadow(0 0 10px rgba(87, 108, 188, 0.3));
+}
+
+.shape[data-shape="circle"] {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+  top: 20%;
+  left: 10%;
+  animation-duration: 25s;
+}
+
+.shape[data-shape="circle"][data-size="large"] {
+  width: 90px;
+  height: 90px;
+  top: 70%;
+  left: 80%;
+  animation-duration: 40s;
+  animation-direction: reverse;
+}
+
+.shape[data-shape="triangle"] {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 52px solid var(--color-primary);
+  opacity: 0.2;
+  top: 60%;
+  right: 15%;
+  animation-duration: 30s;
+  animation-direction: reverse;
+}
+
+.shape[data-shape="triangle"][data-size="small"] {
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 35px solid var(--color-secondary);
+  top: 15%;
+  right: 60%;
+  animation-duration: 35s;
+}
+
+.shape[data-shape="square"] {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, rgba(87, 108, 188, 0.3), rgba(19, 42, 83, 0.3));
+  transform: rotate(45deg);
+  top: 80%;
+  left: 70%;
+  animation-duration: 35s;
+}
+
+.shape[data-shape="square"][data-size="medium"] {
+  width: 25px;
+  height: 25px;
+  top: 40%;
+  left: 20%;
+  animation-duration: 28s;
+  animation-direction: reverse;
+}
+
+/* Floating particles */
+.particle {
+  position: absolute;
+  width: var(--size, 3px);
+  height: var(--size, 3px);
+  background: radial-gradient(circle, var(--color-primary) 0%, rgba(87, 108, 188, 0.5) 50%, transparent 70%);
+  border-radius: 50%;
+  opacity: 1;
+  animation: particleFloat var(--duration, 25s) var(--delay, 0s) infinite linear;
+  top: 100vh;
+  left: var(--start-x, 50vw);
+  box-shadow: 0 0 10px rgba(87, 108, 188, 0.3);
+}
+
+/* Gradient orbs */
+.gradientOrb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.6;
+  animation: orbPulse 15s infinite ease-in-out;
+}
+
+.gradientOrb[data-orb="1"] {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(87, 108, 188, 0.4) 0%, transparent 70%);
+  top: 10%;
+  right: 20%;
+  animation-delay: 0s;
+}
+
+.gradientOrb[data-orb="2"] {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(19, 42, 83, 0.5) 0%, transparent 70%);
+  bottom: 30%;
+  left: 10%;
+  animation-delay: 5s;
+}
+
+.gradientOrb[data-orb="3"] {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(87, 108, 188, 0.2) 0%, transparent 70%);
+  top: 50%;
+  right: 10%;
+  animation-delay: 10s;
+}
+
+.gradientOrb[data-orb="4"] {
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(25, 55, 109, 0.4) 0%, transparent 70%);
+  bottom: 10%;
+  right: 40%;
+  animation-delay: 2s;
+  animation-direction: reverse;
+}
+
+/* Keyframe animations */
+@keyframes floatAround {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(100px, -50px) rotate(90deg);
+  }
+  50% {
+    transform: translate(-50px, -100px) rotate(180deg);
+  }
+  75% {
+    transform: translate(-100px, 50px) rotate(270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(var(--end-x, 0));
+    opacity: 0;
+  }
+}
+
+@keyframes orbPulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.1;
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 830px) {
+  .shape {
+    transform: scale(0.7);
+  }
+  
+  .gradientOrb {
+    transform: scale(0.8);
+  }
+  
+  .particle {
+    width: 2px;
+    height: 2px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .shape {
+    transform: scale(0.5);
+  }
+  
+  .gradientOrb {
+    transform: scale(0.6);
+  }
+}
+
+/* Constellation effect */
+.constellation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  left: var(--x);
+  top: var(--y);
+  opacity: 0;
+  animation: starTwinkle 4s var(--delay, 0s) infinite ease-in-out;
+  box-shadow: 0 0 6px var(--color-primary), 0 0 12px var(--color-primary);
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}

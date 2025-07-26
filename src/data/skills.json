@@ -24,6 +24,10 @@
       "imageSrc": "skills/express.png"
     },
     {
+      "title":"MongoDB",
+      "imageSrc": "skills/db.jpg"
+    },
+    {
       "title": "C++",
       "imageSrc": "skills/c++.png"
     },

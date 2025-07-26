@@ -7,6 +7,14 @@
     "demo": "https://sortify-react.netlify.app/",
     "source": "https://github.com/Sh1wang1/sortify"
   },
+   {
+    "title": "Real Time Chat App",
+    "imageSrc": "projects/chat.png",
+    "description": "Built a full-stack chat app with real-time messaging using Socket.IO, React.js, and Node.js with different Themes option",
+    "skills":["MongoDB","Express.js","React.Js","DaisyUI","Tailwind CSS"],
+    "demo": "https://chat-final-ax86.onrender.com/login",
+    "source": "https://github.com/Sh1wang1/chat"
+  },
   {
     "title": "CodeEditor",
     "imageSrc": "projects/projects.png",
@@ -15,23 +23,8 @@
     "demo": "https://codeeditor-js.netlify.app/",
     "source": "https://github.com/Sh1wang1/codeEditor_js_project"
   },
-  {
-    "title": "Item Manager",
-    "imageSrc": "projects/item.JPG",
-    "description": "A small Item Manager app using React, Express, Mongoose, with modals and email support via Nodemailer.",
-    "skills": [
-      "React","JavaScript","Axios","Express.js","Mongoose","Nodemailer"],
-    "demo":"https://reactassginment-frontend.onrender.com/",
-    "source":  "https://github.com/Sh1wang1/reactAssginment"
-  },
-  {
-    "title": "CRUD Next.js",
-    "imageSrc": "projects/next.JPG",
-    "description": "A responsive CRUD app allowing users to add, edit, and delete items with dynamic routing and clean UI.",
-    "skills": ["Next.js 15", "React 19", "JavaScript"],
-    "demo": "https://assignment-fetl42jhm-sh1wang1s-projects.vercel.app/",
-    "source": "https://github.com/Sh1wang1/Assignment"
-  },
+  
+ 
   {
     "title": "Pokemon Finder",
     "imageSrc": "projects/poke.JPG",

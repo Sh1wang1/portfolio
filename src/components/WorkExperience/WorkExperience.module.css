@@ -1,0 +1,122 @@
+@import "../../vars.css";
+
+.container {
+  margin-top: 76px;
+  color: var(--color-text);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  margin-bottom: 37px;
+}
+
+.experienceItem {
+  background: linear-gradient(180deg, rgba(87, 108, 188, 0.1) 0%, rgba(19, 42, 83, 0.1) 100%);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(87, 108, 188, 0.2);
+  box-shadow: 0 8px 16px rgba(4, 21, 45, 0.3);
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.companyName {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.role {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-text);
+  background: var(--color-dark);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-style: italic;
+}
+
+.details {
+  margin-top: 15px;
+}
+
+.responsibilities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.responsibilities li {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.responsibilities li::before {
+  content: "▶";
+  color: var(--color-primary);
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 830px) {
+  .container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  .title {
+    font-size: 28px;
+  }
+  
+  .companyName {
+    font-size: 24px;
+  }
+  
+  .role {
+    font-size: 16px;
+  }
+  
+  .responsibilities li {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .experienceItem {
+    padding: 20px;
+  }
+  
+  .company {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+  
+  .companyName {
+    font-size: 22px;
+  }
+}

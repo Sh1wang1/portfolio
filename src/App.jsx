@@ -5,15 +5,19 @@ import { Experience } from "./components/Experience/Experience";
 import { Hero } from "./components/Hero/Hero";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Projects } from "./components/Projects/Projects";
+import { WorkExperience } from "./components/WorkExperience/WorkExperience";
+import { AnimatedBackground } from "./components/AnimatedBackground/AnimatedBackground";
 
 function App() {
   return (
     <div className={styles.App}>
+      <AnimatedBackground />
       <Navbar />
       <Hero />
       <About />
       <Experience />
       <Projects />
+      <WorkExperience />
       <Contact />
     </div>
   );

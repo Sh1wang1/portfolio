@@ -1,40 +1,74 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./Experience.module.css";
 import skills from "../../data/skills.json";
 import { getImageUrl } from "../../utils";
 
-
-
 const Experience= () => {
-  useEffect(() => {
-    const bgAnimation = document.getElementById('bgAnimation');
-    for (let i = 0; i < 50; i++) {
-      const particle = document.createElement('div');
-      particle.className = styles.particle;
-      particle.style.left = Math.random() * 100 + '%';
-      particle.style.animationDelay = Math.random() * 6 + 's';
-      particle.style.animationDuration = Math.random() * 3 + 4 + 's';
-      bgAnimation?.appendChild(particle);
-    }
+  const [isVisible, setIsVisible] = useState(false);
+  const experienceRef = useRef(null);
 
+  useEffect(() => {
     const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const progress = entry.target;
-            const targetWidth = progress.dataset.width;
-            progress.style.width = '0%';
-            setTimeout(() => {
-              progress.style.width = targetWidth;
-            }, 200);
-          }
-        });
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
       },
-      { threshold: 0.5 }
+      {
+        threshold: 0.2,
+        rootMargin: '-50px 0px -50px 0px'
+      }
     );
 
-    document.querySelectorAll(`.${styles.progressFill}`).forEach(bar => observer.observe(bar));
+    if (experienceRef.current) {
+      observer.observe(experienceRef.current);
+    }
+
+    return () => {
+      if (experienceRef.current) {
+        observer.unobserve(experienceRef.current);
+      }
+    };
   }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      const bgAnimation = document.getElementById('bgAnimation');
+      // Clear existing particles
+      if (bgAnimation) {
+        bgAnimation.innerHTML = '';
+      }
+      
+      for (let i = 0; i < 50; i++) {
+        const particle = document.createElement('div');
+        particle.className = styles.particle;
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 6 + 's';
+        particle.style.animationDuration = Math.random() * 3 + 4 + 's';
+        bgAnimation?.appendChild(particle);
+      }
+
+      const skillObserver = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const progress = entry.target;
+              const targetWidth = progress.dataset.width;
+              progress.style.width = '0%';
+              setTimeout(() => {
+                progress.style.width = targetWidth;
+              }, 200);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      document.querySelectorAll(`.${styles.progressFill}`).forEach(bar => skillObserver.observe(bar));
+    }
+  }, [isVisible]);
 
   const filterSkills = (category) => {
     document.querySelectorAll(`.${styles.categoryBtn}`).forEach(btn =>
@@ -53,14 +87,14 @@ const Experience= () => {
   return (
     <>
       <div id="bgAnimation" className={styles.bgAnimation}></div>
-      <div className={styles.container} id="experience">
+      <div className={`${styles.container} ${isVisible ? styles.visible : ''}`} id="experience" ref={experienceRef}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Technical Skills</h2>
+          <h2 className={`${styles.sectionTitle} ${isVisible ? styles.slideInDown : ''}`}>Technical Skills</h2>
          
         </div>
 
-        <div className={styles.categories}>
-          {['all', 'frontend', 'backend', 'database','programming language'].map(category => (
+        <div className={`${styles.categories} ${isVisible ? styles.slideInUp : ''}`}>
+          {['all', 'frontend', 'backend', 'programming language'].map(category => (
             <button
               key={category}
               className={`${styles.categoryBtn} ${category === 'all' ? styles.active : ''}`}
@@ -74,7 +108,12 @@ const Experience= () => {
 
         <div className={styles.skillsGrid}>
           {skills.map(({ name, level, width, icon, category }, index) => (
-            <div className={styles.skillCard} key={index} data-category={category}>
+            <div 
+              className={`${styles.skillCard} ${isVisible ? styles.fadeInUp : ''}`} 
+              key={index} 
+              data-category={category}
+              style={{animationDelay: `${index * 0.1}s`}}
+            >
               <div className={styles.skillIcon}>
                 <img
                         src={getImageUrl(icon)}

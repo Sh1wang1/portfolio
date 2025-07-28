@@ -1,175 +1,362 @@
 @import "../../vars.css";
 
 .container {
-  margin-top: 76px;
-  color: var(--color-text);
-  margin-left: 10%;
-  margin-right: 10%;
+  scroll-margin-top: 50px;
+  position: relative;
+  background: transparent;
+  min-height: 100vh;
+  padding: 80px 24px;
+  margin-top: 79px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.container.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .title {
-  font-size: 35px;
+  color: var(--color-text);
+  font-size: 48px;
   font-weight: 700;
-  letter-spacing: 1.75px;
-  text-transform: uppercase;
-  margin-bottom: 37px;
+  letter-spacing: -0.025em;
+  text-align: center;
+  margin-bottom: 60px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 0.6s ease-out;
 }
 
-.experienceItem {
-  background: linear-gradient(120deg, #132a53 80%, #19376d 100%);
-  border-radius: 16px;
-  box-shadow: 0 4px 24px 0 #04152d55;
-  padding: 32px 36px;
+.slideInDown {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timelineContainer {
   position: relative;
-  border: 1px solid #19376d;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0;
 }
 
-.company {
+.timelineLine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #b19cd9, #9d84c7, #dda0dd);
+  transform: translateX(-50%);
+  border-radius: 2px;
+  box-shadow: 0 0 20px rgba(177, 156, 217, 0.4);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 60px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.timelineItem:nth-child(even) {
+  text-align: right;
+}
+
+.timelineItem:nth-child(even) .experienceCard {
+  margin-left: auto;
+  margin-right: 60px;
+}
+
+.timelineItem:nth-child(odd) .experienceCard {
+  margin-right: auto;
+  margin-left: 60px;
+}
+
+.timelinePoint {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #b19cd9, #9d84c7);
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 15px;
+  justify-content: center;
+  color: white;
+  box-shadow: 
+    0 4px 16px rgba(177, 156, 217, 0.4),
+    0 0 0 8px rgba(177, 156, 217, 0.1);
+  z-index: 2;
+}
+
+.experienceCard {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(177, 156, 217, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  width: calc(50% - 40px);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    0 4px 16px rgba(177, 156, 217, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.experienceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(177, 156, 217, 0.1), transparent);
+  transition: left 0.8s ease;
+}
+
+.experienceCard:hover::before {
+  left: 100%;
+}
+
+.experienceCard:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(177, 156, 217, 0.4);
+  box-shadow: 
+    0 16px 48px rgba(0, 0, 0, 0.2),
+    0 8px 24px rgba(177, 156, 217, 0.2);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   margin-bottom: 20px;
   flex-wrap: wrap;
 }
 
-.companyName {
-  font-size: 26px;
-  font-weight: 700;
-  color: #8ab4f8;
-  margin: 0;
-}
-
-.role {
-  font-size: 17px;
-  font-weight: 500;
-  color: #fff;
-  background: #19376d;
-  padding: 6px 16px;
-  border-radius: 16px;
-  font-style: italic;
-  margin-left: 0;
-  margin-bottom: 4px;
-}
-
-.period {
-  display: inline-block;
-  font-size: 15px;
-  color: #b0b8d1;
-  background: #132a53;
-  border-radius: 12px;
-  padding: 2px 10px;
-  font-weight: 400;
-}
-
-.details {
-  margin-top: 15px;
-}
-
-.description {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.6;
-  margin-bottom: 10px;
-  color: var(--color-text);
-}
-
-.responsibilities {
-  margin: 0;
-  padding-left: 0;
-  font-size: 17px;
-  color: #e0e6f7;
-  list-style: none;
-}
-
-.responsibilities li {
-  margin-bottom: 12px;
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  line-height: 1.7;
-  background: none;
-}
-
-.icon {
-  color: #576cbc;
-  margin-top: 3px;
-  min-width: 20px;
-}
-
-/* Timeline styles */
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-}
-
-.companyRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  margin-bottom: 10px;
-}
-
 .companyLogo {
-  background: linear-gradient(135deg, #19376d 0%, #576cbc 100%);
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(177, 156, 217, 0.3), rgba(157, 132, 199, 0.2));
+  border: 1px solid rgba(177, 156, 217, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(25, 55, 109, 0.15);
+  color: #b19cd9;
+  transition: all 0.3s ease;
 }
 
-.topRightInfo {
+.experienceCard:hover .companyLogo {
+  transform: scale(1.1) rotate(5deg);
+  background: linear-gradient(135deg, rgba(177, 156, 217, 0.5), rgba(157, 132, 199, 0.3));
+}
+
+.headerInfo {
+  flex: 1;
+}
+
+.companyName {
+  color: var(--color-text);
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  transition: all 0.3s ease;
+}
+
+.experienceCard:hover .companyName {
+  color: #b19cd9;
+}
+
+.role {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.period {
+  background: linear-gradient(135deg, #b19cd9, #9d84c7);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cardContent {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.location {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.techTags {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 4px;
-  margin-left: auto;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
 }
 
-/* Responsive design */
-@media screen and (max-width: 830px) {
+.tag {
+  background: rgba(177, 156, 217, 0.2);
+  border: 1px solid rgba(177, 156, 217, 0.3);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: rgba(177, 156, 217, 0.4);
+  border-color: rgba(177, 156, 217, 0.6);
+  transform: translateY(-2px);
+}
+
+.gpaTag {
+  margin: 12px 0 16px 0;
+}
+
+.gpaLabel {
+  background: linear-gradient(135deg, #b19cd9, #9d84c7);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 2px solid #dda0dd;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(177, 156, 217, 0.3);
+  transition: all 0.3s ease;
+}
+
+.gpaLabel:hover {
+  background: linear-gradient(135deg, #dda0dd, #b19cd9);
+  border-color: #c8a2c8;
+  box-shadow: 0 4px 12px rgba(177, 156, 217, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Animations */
+.fadeInLeft {
+  opacity: 1;
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fadeInRight {
+  opacity: 1;
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
   .container {
-    margin-left: 5%;
-    margin-right: 5%;
+    padding: 60px 16px;
+    margin-top: 0;
   }
-  
-  .title {
-    font-size: 28px;
-  }
-  
-  .companyName {
-    font-size: 24px;
-  }
-  
-  .role {
-    font-size: 16px;
-  }
-  
-  .responsibilities li {
-    font-size: 16px;
-  }
-}
 
-@media screen and (max-width: 480px) {
-  .experienceItem {
+  .title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .timelineContainer {
+    padding: 20px 0;
+  }
+
+  .timelineLine {
+    left: 30px;
+  }
+
+  .timelinePoint {
+    left: 30px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .timelineItem:nth-child(even) {
+    text-align: left;
+  }
+
+  .timelineItem:nth-child(even) .experienceCard,
+  .timelineItem:nth-child(odd) .experienceCard {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+    margin-right: 0;
+  }
+
+  .experienceCard {
     padding: 20px;
   }
-  
-  .company {
+
+  .cardHeader {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 12px;
   }
-  
-  .title {
-    font-size: 24px;
+
+  .companyLogo {
+    width: 40px;
+    height: 40px;
   }
-  
+
   .companyName {
-    font-size: 22px;
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .tag {
+    font-size: 11px;
+    padding: 3px 10px;
   }
 }
+
+

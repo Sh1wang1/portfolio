@@ -9,22 +9,35 @@
   pointer-events: none;
   z-index: 1;
   overflow: hidden;
-  background: radial-gradient(ellipse at center, rgba(87, 108, 188, 0.05) 0%, transparent 50%);
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(177, 156, 217, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(157, 132, 199, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(221, 160, 221, 0.05) 0%, transparent 50%);
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 /* Floating geometric shapes */
 .shape {
   position: absolute;
-  opacity: 0.25;
+  opacity: 0.4;
   animation: floatAround 20s infinite linear;
-  filter: drop-shadow(0 0 10px rgba(87, 108, 188, 0.3));
+  filter: drop-shadow(0 0 15px rgba(177, 156, 217, 0.5));
+  z-index: 2;
 }
 
 .shape[data-shape="circle"] {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(135deg, #b19cd9, #9d84c7);
   top: 20%;
   left: 10%;
   animation-duration: 25s;
@@ -37,6 +50,7 @@
   left: 80%;
   animation-duration: 40s;
   animation-direction: reverse;
+  background: linear-gradient(135deg, #dda0dd, #c8a2c8);
 }
 
 .shape[data-shape="triangle"] {
@@ -44,8 +58,7 @@
   height: 0;
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
-  border-bottom: 52px solid var(--color-primary);
-  opacity: 0.2;
+  border-bottom: 52px solid rgba(177, 156, 217, 0.6);
   top: 60%;
   right: 15%;
   animation-duration: 30s;
@@ -98,43 +111,44 @@
 .gradientOrb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(40px);
-  opacity: 0.6;
-  animation: orbPulse 15s infinite ease-in-out;
+  filter: blur(60px);
+  opacity: 0.8;
+  animation: orbPulse 20s infinite ease-in-out;
+  z-index: 0;
 }
 
 .gradientOrb[data-orb="1"] {
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(87, 108, 188, 0.4) 0%, transparent 70%);
-  top: 10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.3) 0%, transparent 70%);
+  top: 15%;
   right: 20%;
   animation-delay: 0s;
 }
 
 .gradientOrb[data-orb="2"] {
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, rgba(19, 42, 83, 0.5) 0%, transparent 70%);
-  bottom: 30%;
-  left: 10%;
-  animation-delay: 5s;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(118, 75, 162, 0.4) 0%, transparent 70%);
+  bottom: 25%;
+  left: 15%;
+  animation-delay: 7s;
 }
 
 .gradientOrb[data-orb="3"] {
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(87, 108, 188, 0.2) 0%, transparent 70%);
-  top: 50%;
-  right: 10%;
-  animation-delay: 10s;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(240, 147, 251, 0.2) 0%, transparent 70%);
+  top: 60%;
+  right: 5%;
+  animation-delay: 14s;
 }
 
 .gradientOrb[data-orb="4"] {
-  width: 180px;
-  height: 180px;
-  background: radial-gradient(circle, rgba(25, 55, 109, 0.4) 0%, transparent 70%);
-  bottom: 10%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.25) 0%, transparent 70%);
+  bottom: 5%;
   right: 40%;
   animation-delay: 2s;
   animation-direction: reverse;
@@ -233,13 +247,56 @@
   box-shadow: 0 0 6px var(--color-primary), 0 0 12px var(--color-primary);
 }
 
-@keyframes starTwinkle {
-  0%, 100% {
-    opacity: 0;
-    transform: scale(1);
+@keyframes floatAround {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(100px, -50px) rotate(90deg);
   }
   50% {
+    transform: translate(200px, 50px) rotate(180deg);
+  }
+  75% {
+    transform: translate(-50px, 100px) rotate(270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes orbPulse {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.8;
+  }
+  25% {
+    transform: scale(1.2) translate(20px, -30px);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(0.8) translate(-40px, 20px);
     opacity: 1;
-    transform: scale(1.5);
+  }
+  75% {
+    transform: scale(1.1) translate(30px, 40px);
+    opacity: 0.7;
+  }
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(var(--drift, 0px)) rotate(360deg);
+    opacity: 0;
   }
 }

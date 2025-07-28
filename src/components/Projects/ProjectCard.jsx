@@ -5,9 +5,14 @@ import { getImageUrl } from "../../utils";
 
 export const ProjectCard = ({
   project: { title, imageSrc, description, skills, demo, source },
+  isVisible,
+  index
 }) => {
   return (
-    <div className={styles.container}>
+    <div 
+      className={`${styles.container} ${isVisible ? styles.fadeInUp : ''}`}
+      style={{animationDelay: `${index * 0.2}s`}}
+    >
       <img
         src={getImageUrl(imageSrc)}
         alt={`Image of ${title}`}

@@ -3,7 +3,7 @@
 .container {
   color: var(--color-text);
   margin-top: 120px;
-  background-color: var(--color-secondary);
+  background: linear-gradient(135deg, rgba(157, 132, 199, 0.8) 0%, rgba(107, 76, 147, 0.9) 100%);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -16,11 +16,10 @@
   font-size: 80px;
   font-weight: 700;
   letter-spacing: 4px;
-  background: linear-gradient(to right, #0080ff,white);
+  background: linear-gradient(135deg, #dda0dd, #ffffff);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  
 }
 
 .text p {
@@ -51,11 +50,12 @@
   letter-spacing: 1.5px;
 }
 
+/* Tablet Responsiveness */
 @media screen and (max-width: 830px) {
   .container {
     flex-direction: column;
     gap: 40px;
-    padding: 40px 5%;
+    padding: 50px 5%;
     margin-top: 80px;
   }
 
@@ -67,44 +67,99 @@
   }
 
   .text h2 {
-    font-size: 50px;
+    font-size: 55px;
     margin-bottom: 15px;
+    letter-spacing: 3px;
   }
 
   .text p {
-    font-size: 24px;
+    font-size: 26px;
+    letter-spacing: 1.5px;
   }
 
   .links {
     align-items: center;
     padding-left: 0;
+    gap: 22px;
+  }
+
+  .link {
     gap: 20px;
   }
 
   .link a {
-    font-size: 20px;
+    font-size: 22px;
+    letter-spacing: 1px;
   }
 }
 
+/* Mobile Large */
 @media screen and (max-width: 480px) {
   .container {
-    padding: 30px 3%;
-    gap: 30px;
+    padding: 40px 4%;
+    gap: 35px;
+    margin-top: 60px;
   }
 
   .text h2 {
-    font-size: 36px;
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
   }
 
   .text p {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .links {
+    gap: 18px;
+  }
+
+  .link {
+    gap: 16px;
+  }
+
+  .link a {
     font-size: 18px;
+    letter-spacing: 0.8px;
+  }
+}
+
+/* Mobile Small */
+@media screen and (max-width: 360px) {
+  .container {
+    padding: 35px 3%;
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  .text h2 {
+    font-size: 32px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+  }
+
+  .text p {
+    font-size: 16px;
+    letter-spacing: 0.8px;
+  }
+
+  .links {
+    gap: 16px;
+  }
+
+  .link {
+    gap: 14px;
   }
 
   .link a {
     font-size: 16px;
+    letter-spacing: 0.6px;
   }
 
-  .link {
-    gap: 15px;
+  .link img {
+    width: 32px;
+    height: 32px;
   }
 }
